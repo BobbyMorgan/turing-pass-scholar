@@ -1,51 +1,59 @@
 # Turing-Pass Scholar
 
+> **Built to pass a human editor, not an AI detector.**
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 Academic de-AI editing for **English original research papers and review articles**, packaged as one portable Agent Skill for Claude Code and Codex.
 
-Turing-Pass Scholar reads as an academically literate, independent editor. Its job is not to guess who or what wrote a manuscript. It asks a more useful question: would a scholarly reader experience this prose as formulaic, generic, poorly judged, suspiciously AI-like, or simply weak?
+Turing-Pass Scholar reads like a demanding academic editor. It does not guess who or what wrote a manuscript. It asks whether the prose would strike a scholarly reader as formulaic, generic, poorly judged, suspiciously AI-like, or simply weak—and intervenes only when there is a real writing problem to solve.
 
-**Current release: v1.0.0**
+**Remove the AI impression. Keep the science.**
 
-## What it does
+## What makes it different
 
-- Diagnoses AI-like writing at the scale where the problem actually lives: phrase, sentence, paragraph, section, or rhetorical architecture.
-- Preserves numbers, units, statistics, equations, technical terms, negation, uncertainty, causal strength, citations, cross-references, and authorial stance.
-- Uses separate paths for original research papers and review articles. Research writing receives higher tolerance for first person, technical repetition, functional enumeration, dense Results prose, and figure/section references. Reviews receive closer scrutiny of empty synthesis, generic taxonomies, paper-by-paper listing, false consensus, and unsupported comprehensiveness.
-- Supports complete manuscripts, individual sections, and short excerpts. It never implies that missing sections were reviewed.
-- Optionally flags material claim drift, ambiguity, terminology conflict, or section-function problems noticed during the de-AI read without expanding into peer review.
-- Audits citations and reference entries for AI/draft residue such as prompts, private notes, placeholders, malformed DOI/URL placeholders, or accidental full-width Chinese punctuation. It does not enforce APA, Vancouver, or another named style.
-- Protects LaTeX commands, labels, citation keys, mathematics, BibTeX structure, and legitimate reference-manager metadata.
+### Human judgment, not a blacklist
 
-## Two working modes
+No banned-word counts, mechanical sentence variation, AI probability, or target score. Familiar patterns are attention cues, not verdicts. A finding must identify a reader-visible weakness that would still deserve revision if AI provenance were never mentioned.
 
-The skill establishes one mode before editing:
+### Rewrite boldly. Preserve precisely.
 
-1. **Whole supplied scope** — diagnose and revise everything the user supplied, then return the complete edited text and a preservation note.
-2. **Paragraph approval** — return the assessment first, stop, and revise affected paragraphs only after the user approves them.
+The right intervention may be one phrase, a paragraph reconstruction, or a section-level recommendation. The skill does not hide structural problems behind synonym swaps—but it treats numbers, statistics, uncertainty, causal strength, terminology, citations, cross-references, mathematics, LaTeX, BibTeX, and authorial stance as load-bearing.
 
-If the genre or mode is missing, the skill asks once for all missing choices. Letters, short communications, correspondence, editorials, perspectives, commentaries, case reports, protocols, theses, dissertations, grants, coursework, peer-review reports, and non-academic writing are hard out of scope.
+### Two genres, two reading paths
 
-## Why it is different
+- **Original research papers:** higher tolerance for first person, precise repetition, functional enumeration, dense Results prose, technical signposting, and figure or section references.
+- **Review articles:** closer scrutiny of empty synthesis, generic taxonomies, paper-by-paper listing, false consensus, vague attribution, and unsupported claims of comprehensiveness.
 
-Most humanizers optimize for generic naturalness or a personal voice. Turing-Pass Scholar keeps the register academic and treats technical precision as load-bearing. Pattern matches are attention cues, not verdicts. A finding must identify a reader-visible defect worth revising even if AI provenance is never mentioned; otherwise it stays out of the report.
+This is not a generic “academic mode.” Each genre receives different editorial attention.
 
-The report is findings-only. It does not list checks that passed, explain why normal conventions are acceptable, generate an AI probability, or populate empty sections. A clean excerpt receives a brief pass and nothing else.
+### Findings, not busywork
+
+The report contains only issues worth acting on. It does not list checks that passed, praise acceptable conventions, or force edits to demonstrate activity. Clean prose receives a brief pass. Material claim drift, ambiguity, terminology conflict, and citation residue may be flagged when noticed during the same de-AI read, without turning the task into peer review.
+
+## What it catches beyond prose
+
+Reference lists and citations are checked for AI or draft residue such as prompts, private notes, unresolved placeholders, malformed DOI/URL placeholders, and accidental full-width Chinese punctuation. The skill protects legitimate reference-manager metadata and does not enforce APA, Vancouver, or another named style.
+
+It works with complete manuscripts, individual sections, and short excerpts. When context is incomplete, it never implies that unseen material was reviewed.
+
+## Choose how edits land
+
+1. **Whole supplied scope** — diagnose and revise everything supplied, then return the complete edited text with a concise preservation note.
+2. **Paragraph approval** — return the editorial assessment first, then discuss and apply affected paragraphs only after approval.
+
+The skill asks once for any missing genre or mode choice before editing.
 
 ## Install
 
 See [INSTALL.md](INSTALL.md) for Windows, macOS, Linux, personal, and project-scoped installation.
-The paths and invocation forms follow the current [Claude Code Skills documentation](https://code.claude.com/docs/en/skills) and [OpenAI Skills documentation](https://developers.openai.com/codex/skills).
-
-Quick paths:
 
 | Host | Personal skill location | Explicit invocation |
 | --- | --- | --- |
 | Claude Code | `~/.claude/skills/academic-deslop/` | `/academic-deslop` |
 | Codex | `$HOME/.agents/skills/academic-deslop/` | `$academic-deslop` |
 
-The same `academic-deslop` folder works in both hosts. No scripts, Python packages, network access, external detector, or API key are required.
+The same `academic-deslop` folder works in both hosts. No scripts, Python packages, external detector, network access, or API key are required.
 
 ## Use
 
@@ -54,29 +62,19 @@ The same `academic-deslop` folder works in both hosts. No scripts, Python packag
 ```
 
 ```text
-This is a review article. Use whole-supplied-scope mode, preserve every citation, and return the complete de-AI revision.
+This is a review article. Use whole-supplied-scope mode, preserve every citation,
+and return the complete de-AI revision.
 ```
 
-```text
-这是 research paper 的 LaTeX 稿。选择 A；顺带检查 BibTeX 条目里有没有提示词、私人备注或中文全角标点。
-```
+## Strict boundary
 
-## Scope and non-goals
-
-Turing-Pass Scholar supports only English original research papers and review articles. It does not perform AI-authorship detection, translation, external fact checking, strict reference-style compliance, plagiarism review, methodology/statistics/ethics review, reporting-guideline review, journal selection, or invention of missing scholarship.
-
-Tables are audit-only: values and cells are not rewritten. Broader academic-editorial observations remain recommendations unless the user separately authorizes substantive editing.
+Turing-Pass Scholar supports only English original research papers and review articles. Other academic genres and non-academic writing are out of scope. It does not perform AI-authorship detection, translation, external fact checking, strict reference-style compliance, plagiarism review, or methodology, statistics, ethics, and reporting-guideline review. Tables are audit-only.
 
 ## Validation
 
-v1.0.0 was behaviorally tested in isolated Codex sessions with de-identified excerpts spanning:
+v1.0.0 was tested in isolated Codex sessions on de-identified pre-generative-AI academic prose, model-generated research and review prose, complete manuscripts and excerpts, both approval modes, scope refusals, citation residue, clean BibTeX metadata, LaTeX, and scientific preservation cases.
 
-- pre-generative-AI, openly licensed original research and review prose;
-- model-generated research and review prose written without deliberately planted errors;
-- complete-pass, paragraph-approval, excerpt, scope-refusal, and missing-mode interactions;
-- citation residue, clean BibTeX library metadata, LaTeX preservation, numbers, units, statistics, negation, uncertainty, figure references, and citation keys.
-
-The evaluation is qualitative by design. Provenance is not treated as ground truth: good model-generated prose may pass, and human-authored prose may still receive a strong editorial criticism. The acceptance criterion is whether the finding is useful and defensible to an academic author.
+Provenance is deliberately not treated as ground truth: strong model-generated prose may pass, while weak human prose may receive substantial criticism. The criterion is whether each finding is useful and defensible to an academic author.
 
 ## Credits
 
