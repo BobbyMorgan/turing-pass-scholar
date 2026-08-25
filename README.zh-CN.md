@@ -46,14 +46,9 @@ Turing-Pass Scholar 像一名挑剔的人类学术编辑一样阅读。它不猜
 
 ## 安装
 
-Windows、macOS、Linux，以及个人级和项目级安装方式见 [INSTALL.md](INSTALL.md)。
-
-| 工具 | 个人 skill 目录 | 显式调用 |
-| --- | --- | --- |
-| Claude Code | `~/.claude/skills/academic-deslop/` | `/academic-deslop` |
-| Codex | `$HOME/.agents/skills/academic-deslop/` | `$academic-deslop` |
-
-同一个 `academic-deslop` 文件夹可同时用于两个工具。无需脚本、Python 包、外部检测器、网络访问或 API key。
+```bash
+npx skills add BobbyMorgan/turing-pass-scholar
+```
 
 ## 使用
 
