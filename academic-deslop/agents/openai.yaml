@@ -1,0 +1,7 @@
+interface:
+  display_name: "Academic De-slop"
+  short_description: "De-AI editing for research papers and review articles"
+  default_prompt: "Use $academic-deslop to assess this English research paper or review article for reviewer-visible AI flavor."
+
+policy:
+  allow_implicit_invocation: true
