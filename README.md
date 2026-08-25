@@ -46,14 +46,9 @@ The skill asks once for any missing genre or mode choice before editing.
 
 ## Install
 
-See [INSTALL.md](INSTALL.md) for Windows, macOS, Linux, personal, and project-scoped installation.
-
-| Host | Personal skill location | Explicit invocation |
-| --- | --- | --- |
-| Claude Code | `~/.claude/skills/academic-deslop/` | `/academic-deslop` |
-| Codex | `$HOME/.agents/skills/academic-deslop/` | `$academic-deslop` |
-
-The same `academic-deslop` folder works in both hosts. No scripts, Python packages, external detector, network access, or API key are required.
+```bash
+npx skills add BobbyMorgan/turing-pass-scholar
+```
 
 ## Use
 
