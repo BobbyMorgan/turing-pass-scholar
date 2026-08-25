@@ -1,5 +1,7 @@
 # Turing-Pass Scholar
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 Academic de-AI editing for **English original research papers and review articles**, packaged as one portable Agent Skill for Claude Code and Codex.
 
 Turing-Pass Scholar reads as an academically literate, independent editor. Its job is not to guess who or what wrote a manuscript. It asks a more useful question: would a scholarly reader experience this prose as formulaic, generic, poorly judged, suspiciously AI-like, or simply weak?
