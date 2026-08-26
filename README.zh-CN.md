@@ -6,6 +6,18 @@
 
 面向**英文原创研究论文和综述文章**的学术降 AI 工具，以一个可移植的 Agent Skill 同时支持 Claude Code 和 Codex。
 
+## Before → After
+
+**Before**
+
+> Across the reviewed literature, AI has emerged as a pivotal and transformative force in precision medicine. First, image-classification models have been evaluated for diagnosis. Moreover, prediction models have been used to select treatments. Furthermore, multimodal systems combine imaging and clinical records. Taken together, these studies collectively underscore the immense potential of this rapidly evolving field.
+
+**After**
+
+> The reviewed studies evaluate AI for three precision-medicine tasks: image-based diagnosis, treatment selection, and the integration of imaging with clinical records.
+
+证据没有变化；被删掉的是通用开场、堆叠连接词、重复总结和缺乏依据的拔高。
+
 Turing-Pass Scholar 像一名挑剔的人类学术编辑一样阅读。它不猜测文稿由谁或什么工具写成，而是判断：学术读者是否会觉得这些文字套路化、空泛、判断失当、带有明显 AI 感，或者仅仅写得不好？只有存在真实写作问题时，它才介入。
 
 **去掉 AI 感，保住科学内容。**
@@ -67,7 +79,7 @@ Turing-Pass Scholar 仅支持英文原创研究论文和综述文章，其他学
 
 ## 验证
 
-v1.0.0 已在相互隔离的 Codex 会话中完成行为测试，去标识化测试材料涵盖生成式 AI 出现前的学术文本、模型生成的研究与综述文本、完整手稿与片段、两种审批模式、范围拒绝、引文残留、干净的 BibTeX 元数据、LaTeX 和科学内容保全案例。
+v2.0.0 已在相互隔离的 Codex 会话中完成行为测试，去标识化测试材料涵盖生成式 AI 出现前的学术文本、模型生成的研究与综述文本、完整手稿与片段、两种审批模式、范围拒绝、引文残留、干净的 BibTeX 元数据、LaTeX 和科学内容保全案例。精简后的四重 gate 架构还接受了范围控制、结构诊断、引文残留和高密度研究文本误伤压力的回归测试。
 
 测试有意不把文本来源当作真实标签：优质模型生成文本可以通过，较弱的人类写作也可能收到大幅修改意见。判断标准是每项发现对学术作者是否有用、是否经得起辩护。
 

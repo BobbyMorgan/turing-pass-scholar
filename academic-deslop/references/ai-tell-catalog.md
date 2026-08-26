@@ -1,8 +1,10 @@
 # Academic AI-tell attention guide
 
-This is an editor's attention guide, not a banned list. A device becomes suspicious through context,
-concentration, prominence, or emptiness. Diagnose the larger problem when several symptoms form one
-paragraph- or section-level pattern.
+Consult this only to test a candidate already noticed during first-pass reading. It is an editor's
+attention guide, not a source of candidates, banned list, or diagnostic engine. A device becomes
+suspicious through context, concentration, prominence, or emptiness. Diagnose the larger problem when
+several symptoms form one paragraph- or section-level pattern; do not search the text to populate these
+categories. The relevant genre path overrides this catalog when it protects a legitimate convention.
 
 ## Framing and document architecture
 
@@ -55,4 +57,3 @@ Clarify only from supplied material; otherwise recommend author/source verificat
   `<add mechanism>`, `XXX`, `TBD`, and unresolved template slots.
 
 These are strong artifacts, but never guess the missing content.
-

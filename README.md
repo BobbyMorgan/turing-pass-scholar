@@ -6,6 +6,18 @@
 
 Academic de-AI editing for **English original research papers and review articles**, packaged as one portable Agent Skill for Claude Code and Codex.
 
+## Before → After
+
+**Before**
+
+> Across the reviewed literature, AI has emerged as a pivotal and transformative force in precision medicine. First, image-classification models have been evaluated for diagnosis. Moreover, prediction models have been used to select treatments. Furthermore, multimodal systems combine imaging and clinical records. Taken together, these studies collectively underscore the immense potential of this rapidly evolving field.
+
+**After**
+
+> The reviewed studies evaluate AI for three precision-medicine tasks: image-based diagnosis, treatment selection, and the integration of imaging with clinical records.
+
+Same evidence. No generic panorama, stacked transitions, repetitive recap, or unsupported inflation.
+
 Turing-Pass Scholar reads like a demanding academic editor. It does not guess who or what wrote a manuscript. It asks whether the prose would strike a scholarly reader as formulaic, generic, poorly judged, suspiciously AI-like, or simply weak—and intervenes only when there is a real writing problem to solve.
 
 **Remove the AI impression. Keep the science.**
@@ -67,7 +79,7 @@ Turing-Pass Scholar supports only English original research papers and review ar
 
 ## Validation
 
-v1.0.0 was tested in isolated Codex sessions on de-identified pre-generative-AI academic prose, model-generated research and review prose, complete manuscripts and excerpts, both approval modes, scope refusals, citation residue, clean BibTeX metadata, LaTeX, and scientific preservation cases.
+v2.0.0 was tested in isolated Codex sessions on de-identified pre-generative-AI academic prose, model-generated research and review prose, complete manuscripts and excerpts, both approval modes, scope refusals, citation residue, clean BibTeX metadata, LaTeX, and scientific preservation cases. Its slimmer four-gate architecture was additionally regression-tested for scope control, structural diagnosis, citation residue, and false-positive pressure on dense research prose.
 
 Provenance is deliberately not treated as ground truth: strong model-generated prose may pass, while weak human prose may receive substantial criticism. The criterion is whether each finding is useful and defensible to an academic author.
 
